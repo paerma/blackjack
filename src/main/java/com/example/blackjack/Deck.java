@@ -13,7 +13,7 @@ public class Deck {
         Collections.shuffle(deck);
     }
 
-    public void createDeck() throws Exception {
+    public void createDeck() {
         for (suits card : suits.values()) {
             for (int i = 0; i < 11; i++) {
                 deck.add(new Card(i + 1, card));
@@ -24,7 +24,7 @@ public class Deck {
     public Card giveCard(Hand hand){
         return deck.removeFirst();
     }
-    public void refreshDeck() throws Exception{
+    public void refreshDeck() {
         deck.clear();
         createDeck();
     }
