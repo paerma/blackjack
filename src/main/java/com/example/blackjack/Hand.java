@@ -8,12 +8,17 @@ public abstract class Hand {
     private int points = 0;
 
 
-    public void getStartCards(Deck deck){
-        cards.add(deck.giveCard());
-        cards.add(deck.giveCard());
+    public void getStartCards(Card card){
+        takeCard(card);
+        takeCard(card);
+    }
+    public void takeCard(Card card){
+        cards.add(card);
         countPoints();
     }
-    public abstract void takeCards(Deck deck);
+
+    public abstract boolean wantsToHit();
+
 
 
     public void countPoints(){

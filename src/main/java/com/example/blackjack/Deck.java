@@ -29,7 +29,7 @@ public class Deck {
     public Card giveCard(){
         return deck.remove(0);
     }
-    public void refreshDeck() {
+    public void newDeck() {
         deck.clear();
         createDeck();
     }
