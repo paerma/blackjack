@@ -34,6 +34,11 @@ public class Table {
         return dealer.toString();
     }
 
+    public boolean ifCanContinue(){
+        int pCount = player.getPoints();
+        if(pCount >= 21) return false;
+        else return true;
+    }
     public Person checkWinCondition(){
         int pCount = player.getPoints();
         int dCount = dealer.getPoints();

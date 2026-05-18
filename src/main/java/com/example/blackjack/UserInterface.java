@@ -12,19 +12,34 @@ public class UserInterface {
     }
 
     public void startGame(){
-        table.startNewGame();
-        System.out.println(table);
-        System.out.println("1. hit \n2.stand");
-        int output = Integer.parseInt(scanner.nextLine());
-        if(output == 1){
-            System.out.println("player hit!");
-            table.hitPlayer();
-            System.out.println(table.playerCards());
-        }
-        System.out.println("dealer hit!");
-        table.hitDealer();
-        System.out.println(table.dealerCards());
-        System.out.println(table.checkWinCondition().getClass() + " wins!");
+        boolean isRunning = true;
+        while(isRunning) {
+            table.startNewGame();
+            System.out.println(table);
 
+            boolean playerTurn = true;
+            while(playerTurn) {
+
+                if(!table.ifCanContinue()){
+                    break;
+                }
+                System.out.println("1. hit \n2.stand");
+                int output = Integer.parseInt(scanner.nextLine());
+                if (output == 1) {
+                    System.out.println("player hit!");
+                    table.hitPlayer();
+                    System.out.println(table.playerCards());
+                    if(!table.ifCanContinue()) playerTurn = false;
+
+                } else playerTurn = false;
+            }
+            System.out.println("dealer hit!");
+            table.hitDealer();
+            System.out.println(table.dealerCards());
+            System.out.println(table.checkWinCondition().getClass().getSimpleName() + " wins!");
+            System.out.println("\n wanna continue? 1. yes 2. no");
+            int output = Integer.parseInt(scanner.nextLine());
+            if (output == 2) isRunning = false;
+        }
     }
 }
