@@ -1,11 +1,5 @@
 package com.example.blackjack;
 
-enum suits{
-    HEARTS,
-    DIAMONDS,
-    CLUBS,
-    SPADES,
-}
 
 public class Card {
     private final int value;
@@ -22,4 +16,7 @@ public class Card {
         return value;
     }
 
+    public String toString(){
+       return cardSuit + " " + value;
+    }
 }
