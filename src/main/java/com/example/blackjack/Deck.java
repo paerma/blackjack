@@ -8,6 +8,11 @@ import java.util.List;
 public class Deck {
     List<Card> deck = new ArrayList<>();
 
+    public Deck(){
+        createDeck();
+        randomize();
+    }
+
 
     public void randomize(){
         Collections.shuffle(deck);
@@ -21,8 +26,8 @@ public class Deck {
         }
     }
 
-    public Card giveCard(Hand hand){
-        return deck.removeFirst();
+    public Card giveCard(){
+        return deck.remove(0);
     }
     public void refreshDeck() {
         deck.clear();
