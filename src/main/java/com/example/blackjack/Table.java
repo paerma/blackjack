@@ -1,7 +1,5 @@
 package com.example.blackjack;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Table {
     private Player player;

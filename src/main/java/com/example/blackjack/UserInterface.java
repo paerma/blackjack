@@ -15,7 +15,7 @@ public class UserInterface {
         table.startNewGame();
         System.out.println(table);
         System.out.println("1. hit \n2.stand");
-        int output = Integer.valueOf(scanner.nextLine());
+        int output = Integer.parseInt(scanner.nextLine());
         if(output == 1){
             System.out.println("player hit!");
             table.hitPlayer();
