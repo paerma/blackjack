@@ -7,7 +7,7 @@ public class Card {
 
     public Card(int value, Suits cardSuit) {
         if(value < 1 || value > 11){
-            throw new IllegalArgumentException("Неправильне значення карти: " + value + ". Має бути від 1 до 11.");
+            throw new IllegalArgumentException("Illegal Card value: " + value + ". Must be in between from 1 to 11.");
         }
         this.value = value;
         this.suit = cardSuit;

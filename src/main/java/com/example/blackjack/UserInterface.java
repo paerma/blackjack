@@ -11,6 +11,8 @@ public class UserInterface {
         this.scanner = scanner;
     }
 
+
+
     public void startGame(){
         boolean isRunning = true;
         while(isRunning) {
@@ -26,17 +28,17 @@ public class UserInterface {
                 System.out.println("1. hit \n2.stand");
                 int output = Integer.parseInt(scanner.nextLine());
                 if (output == 1) {
-                    System.out.println("player hit!");
                     table.hitPlayer();
                     System.out.println(table.playerCards());
                     if(!table.ifCanContinue()) playerTurn = false;
 
                 } else playerTurn = false;
             }
-            System.out.println("dealer hit!");
+            table.getDealer().addHiddenCardToList();
+            System.out.println(table.dealerCards());
             table.hitDealer();
             System.out.println(table.dealerCards());
-            System.out.println(table.checkWinCondition().getClass().getSimpleName() + " wins!");
+            System.out.println(table.checkWinCondition() + " wins!");
             System.out.println("\n wanna continue? 1. yes 2. no");
             int output = Integer.parseInt(scanner.nextLine());
             if (output == 2) isRunning = false;
