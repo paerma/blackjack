@@ -9,6 +9,7 @@ public class Deck {
     final private List<Card> deck = new ArrayList<>();
 
     public Deck(){
+        clearDeck();
         createDeck();
         shuffle();
     }
@@ -39,8 +40,7 @@ public class Deck {
     public Card giveCard(){
         return deck.remove(deck.size()-1);
     }
-    public void newDeck() {
+    public void clearDeck() {
         deck.clear();
-        createDeck();
     }
 }
