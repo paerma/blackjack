@@ -1,6 +1,8 @@
 package com.example.blackjack;
 
 
+import java.util.List;
+
 public class Table {
     private Player player;
     private Dealer dealer;
@@ -21,21 +23,22 @@ public class Table {
     }
 
     public void hitPlayer(){
-        this.player.takeCard(deck.giveCard());
+        player.takeCard(deck.giveCard());
     }
     public void hitDealer(){
-        if(this.dealer.getPoints()<=16) this.dealer.takeCard(deck.giveCard());
+        if(dealer.getPoints()<=16) dealer.takeCard(deck.giveCard());
     }
 
-    public String playerCards(){
-        return player.toString();
+    public Card getPlayerCard(int index){
+        return player.getCard(index);
     }
-    public String dealerCards(){
-        return dealer.toString();
+    public Card getDealerCard(int index){
+        return dealer.getCard(index);
     }
     public Dealer getDealer(){
         return dealer;
     }
+    public Player getPlayer() { return player; }
 
 
     public boolean ifCanContinue(){
