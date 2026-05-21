@@ -11,13 +11,6 @@ The game features classic gameplay against a computer dealer, with no betting sy
 * Dealer AI logic: the dealer hits on under 17 and stands on 17 or higher.
 * Simple graphical user interface (UI).
 
-## Demo
-
-Here is a quick look at the gameplay:
-
-<img width="640" height="474" alt="Screencast_21" src="https://github.com/user-attachments/assets/885de392-477d-4a04-937f-280b7dfb969e" />
-
-
 ## Tech Stack
 * **Java** (version 14)
 * **JavaFX**
