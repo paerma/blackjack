@@ -30,3 +30,4 @@ git clone https://github.com/Paerma/blackjack.git
 cd blackjack
 chmod +x mvnw
 ./mvnw clean javafx:run
+(Alternatively, you can just open this project in IntelliJ IDEA or Eclipse and run the Controller.java class directly)
