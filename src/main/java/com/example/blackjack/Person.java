@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Person {
-    protected List<Card> cards = new ArrayList<>();
+    private List<Card> cards = new ArrayList<>();
 
 
 
@@ -13,6 +13,12 @@ public abstract class Person {
         cards.add(card);
     }
 
+    public Card getCard(int index){
+        if (cards != null && index >= 0 && index < cards.size()) {
+            return cards.get(index);
+        }
+        return null;
+        }
 
 
 
