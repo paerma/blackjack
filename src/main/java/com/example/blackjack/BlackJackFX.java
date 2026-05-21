@@ -13,7 +13,7 @@ public class BlackJackFX extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(BlackJackFX.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 500);
         stage.setResizable(false);
-        stage.setTitle("Hello!");
+        stage.setTitle("Blackjack Game");
         stage.setScene(scene);
         stage.show();
     }
